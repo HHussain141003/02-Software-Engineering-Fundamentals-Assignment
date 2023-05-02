@@ -1,11 +1,11 @@
-Employee_ID,Name,Surname,Telephone,Email,Annual_leave_requested,Annual_leave_taken,Annual_leave_left
-EMP_ID1,James,Evans,07943 634354,James.Evans@fujitsu.com,7,9,16
-EMP_ID2,Amelia,Miller,07989 868452,Amelia.Miller@fujitsu.com,14,3,22
-EMP_ID3,Diane,Cook,07974 037052,Diane.Cook@fujitsu.com,3,8,17
-EMP_ID4,George,Harrison,07876 099495,George.Harrison@fujitsu.com,10,8,17
-EMP_ID5,Laura,Wood,07823 590672,Laura.Wood@fujitsu.com,7,8,17
-EMP_ID6,Emily,Hall,07940 962199,Emily.Hall@fujitsu.com,9,7,18
-EMP_ID7,Tyler,Kelly,07068 346398,Tyler.Kelly@fujitsu.com,3,10,15
-EMP_ID8,Steven,Clarke,07400 761865,Steven.Clarke@fujitsu.com,3,3,22
-EMP_ID9,Ronald,Moore,07819 037354,Ronald.Moore@fujitsu.com,13,4,21
-EMP_ID10,Donna,Clarke,07837 539098,Donna.Clarke@fujitsu.com,15,6,19
+IssueNo.,Name,Surname,Telephone,Email,Severity,Type,Comments,Days_Affected,Solved?
+REQ1,James,Evans,07943 634354,James.Evans@fujitsu.com,Low,Network Connectivity,Unable to connect to the internet,2,No
+REQ2,Amelia,Miller,07989 868452,Amelia.Miller@fujitsu.com,Medium,Software,Microsoft Office keeps crashing,3,Yes
+REQ3,Diane,Cook,07974 037052,Diane.Cook@fujitsu.com,High,Hardware,Laptop won't turn on,1,Yes
+REQ4,George,Harrison,07876 099495,George.Harrison@fujitsu.com,Low,Network Connectivity,Slow internet speeds,4,No
+REQ5,Laura,Wood,07823 590672,Laura.Wood@fujitsu.com,Medium,Email,Can't send or receive emails,5,Yes
+REQ6,Emily,Hall,07940 962199,Emily.Hall@fujitsu.com,High,Security,"Suspected phishing email received, clicked on link and entered credentials",1,No
+REQ7,Tyler,Kelly,07068 346398,Tyler.Kelly@fujitsu.com,Low,Software,Printer won't connect to laptop,2,No
+REQ8,Steven,Clarke,07400 761865,Steven.Clarke@fujitsu.com,Medium,Hardware,Keyboard not working,3,Yes
+REQ9,Ronald,Moore,07819 037354,Ronald.Moore@fujitsu.com,High,Email,Email account has been hacked,2,No
+REQ10,Donna,Clarke,07837 539098,Donna.Clarke@fujitsu.com,Low,Software,Excel freezes when trying to save,1,No
