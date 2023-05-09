@@ -43,21 +43,27 @@ def add_record():
 user_action = ""
 
 table()
-while user_action != "Exit":
-    user_action = input("Please type in the action you want to carry out (New/Edit/Delete/Exit): ")
+while user_action != "X":
+    print("Please type in the action you want to carry out:")
+    print("N - New record")
+    print("E - Edit record")
+    print("D - Delete record")
+    print("X - Exit application")
+    print("")
+    user_action = input("Action: ")
 # ----------------------------------------------------------------------------------------------------------------------
-    if user_action == "New":
+    if user_action == "N":
         add_record()
         print("New Record added successfully!")
         table()
 # ----------------------------------------------------------------------------------------------------------------------
-    elif user_action == "Edit":
+    elif user_action == "E":
         print("Test: Edit")
 # ----------------------------------------------------------------------------------------------------------------------
-    elif user_action == "Delete":
+    elif user_action == "D":
         print("Test: Delete")
 # ----------------------------------------------------------------------------------------------------------------------
-    elif user_action == "Exit":
+    elif user_action == "X":
         print("Exited the app successfully")
 # ----------------------------------------------------------------------------------------------------------------------
     else:
