@@ -1,4 +1,4 @@
-IssueNo.,Name,Surname,Telephone,Email,Severity,Type,Comments,Days_Affected,Solved?
+IssueNo,Name,Surname,Telephone,Email,Severity,Type,Comments,Days_Affected,Solved
 1,James,Evans,07943 634354,James.Evans@fujitsu.com,Low,Network Connectivity,Unable to connect to the internet,2,No
 2,Amelia,Miller,07989 868452,Amelia.Miller@fujitsu.com,Medium,Software,Microsoft Office keeps crashing,3,Yes
 3,Diane,Cook,07974 037052,Diane.Cook@fujitsu.com,High,Hardware,Laptop won't turn on,1,Yes
