@@ -21,6 +21,7 @@ def add_record():
             reader = csv.DictReader(existing_file)
             IssueNo = [int(row['IssueNo']) for row in reader]
             IssueNo = max(IssueNo) + 1
+        # Validation for the necessary fields.
         Name = input("Enter your name: ")
         Surname = input("Enter your surname: ")
         Telephone = input("Enter your telephone number: ")
