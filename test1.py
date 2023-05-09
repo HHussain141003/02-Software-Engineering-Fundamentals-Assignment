@@ -11,7 +11,7 @@ def table():
         table = from_csv(fp)
     print(table)
 
-# Add New record function.
+# Add New record function
 def add_record():
     with open('Data.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
