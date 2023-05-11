@@ -22,15 +22,50 @@ def add_record():
             IssueNo = [int(row['IssueNo']) for row in reader]
             IssueNo = max(IssueNo) + 1
         # Validation for the necessary fields.
-        Name = input("Enter your name: ")
-        Surname = input("Enter your surname: ")
-        Telephone = input("Enter your telephone number: ")
-        Email = input("Enter your email: ")
-        Severity = input("Enter the severity (Low, Medium, or High): ")
+        while True:
+            Name = input("Enter your name: ")
+            if any(char.isdigit() for char in Name):
+                print("Please enter a valid name!")
+            else:
+                break
+        while True:
+            Surname = input("Enter your surname: ")
+            if any(char.isdigit() for char in Name):
+                print("Please enter a valid surname!")
+            else:
+                break
+        while True:
+            Telephone = input("Enter your telephone number: ")
+            if not Telephone.isdigit() or len(Telephone) != 11:
+                print("Please enter a valid number!")
+            else:
+                break
+        while True:
+            Email = input("Enter your email: ")
+            if '@' not in Email:
+                print("Please enter a valid Email!")
+            else:
+                break
+        while True:
+            Severity = input("Enter the severity (Low, Medium, or High): ")
+            if Severity not in ['Low', 'Medium', 'High']:
+                print("Please choose a suitable severity from Low, Medium or High!")
+            else:
+                break
         Type = input("Enter the issue type: ")
         Comments = input("Enter any comments: ")
-        Days_Affected = input("Enter the number of days affected: ")
-        Solved = input("Is the issue solved? (Yes or No): ")
+        while True:
+            Days_Affected = input("Enter the number of days affected: ")
+            if not Days_Affected.isdigit() or int(Days_Affected) < 0 or int(Days_Affected) > 100:
+                print("Please enter a valid Number!")
+            else:
+                break
+        while True:
+            Solved = input("Is the issue solved? (Yes or No): ")
+            if Solved not in ['Yes', 'No']:
+                print("Please enter a suitable value Yes/No")
+            else:
+                break
 
         file.seek(0, 2)  # move the pointer to the end of the file
         writer.writerow([IssueNo, Name, Surname, Telephone, Email, Severity, Type, Comments, Days_Affected, Solved])
@@ -44,7 +79,7 @@ user_action = ""
 
 table()
 while user_action != "X":
-    print("Please type in the action you want to carry out:")
+    print("Please choose the action you want to carry out from the following options:")
     print("N - New record")
     print("E - Edit record")
     print("D - Delete record")
