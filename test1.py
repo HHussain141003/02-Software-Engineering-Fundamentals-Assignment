@@ -2,6 +2,7 @@
 # Created on:           21/03/2023
 
 import csv
+import os
 from prettytable import from_csv
 from prettytable import PrettyTable
 
@@ -72,7 +73,23 @@ def add_record():
 
     print("Issue added successfully!")
 
+# Delete record function
+def delete_record():
+    Issue_No = input("Enter the IssueNo to delete: ")
+    temp_file = "temp.csv"
 
+    with open('Data.csv', mode='r') as file, open(temp_file, mode='w', newline='') as temp:
+        reader = csv.DictReader(file)
+        writer = csv.DictWriter(temp, fieldnames=reader.fieldnames)
+        writer.writeheader()
+
+        for row in reader:
+            if row['IssueNo'] != Issue_No:
+                writer.writerow(row)
+
+    os.remove('Data.csv')
+    os.rename(temp_file, 'Data.csv')
+    print("Record deleted successfully!")
 
 # Let the user decide whether they want to Create a new record, Edit an existing record or Delete an existing record.
 user_action = ""
@@ -96,7 +113,8 @@ while user_action != "X":
         print("Test: Edit")
 # ----------------------------------------------------------------------------------------------------------------------
     elif user_action == "D":
-        print("Test: Delete")
+        delete_record()
+        table()
 # ----------------------------------------------------------------------------------------------------------------------
     elif user_action == "X":
         print("Exited the app successfully")
