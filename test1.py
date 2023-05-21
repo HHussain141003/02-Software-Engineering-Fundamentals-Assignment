@@ -177,9 +177,9 @@ def edit_record():
             writer.writerow([row['IssueNo'], row['Name'], row['Surname'], row['Telephone'], row['Email'], row['Severity'], row['Type'], row['Comments'], row['Days_Affected'], row['Solved']])
 
     print("Record edited successfully!")
-# Let the user decide whether they want to Create a new record, Edit an existing record or Delete an existing record.
-user_action = ""
 
+# User Menu
+user_action = ""
 table()
 while user_action != "X":
     print("Please choose the action you want to carry out from the following options:")
@@ -189,22 +189,18 @@ while user_action != "X":
     print("X - Exit application")
     print("")
     user_action = input("Action: ")
-# ----------------------------------------------------------------------------------------------------------------------
+
     if user_action == "N":
         add_record()
         print("New Record added successfully!")
         table()
-# ----------------------------------------------------------------------------------------------------------------------
     elif user_action == "E":
         edit_record()
         table()
-# ----------------------------------------------------------------------------------------------------------------------
     elif user_action == "D":
         delete_record()
         table()
-# ----------------------------------------------------------------------------------------------------------------------
     elif user_action == "X":
         print("Exited the app successfully")
-# ----------------------------------------------------------------------------------------------------------------------
     else:
         print("Error, please enter a correct value")
