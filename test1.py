@@ -1,6 +1,7 @@
 # Name:                 Test1.py
 # Created on:           21/03/2023
 
+# Import all Libraries required for the Application
 import csv
 import os
 from prettytable import from_csv
@@ -76,23 +77,31 @@ def add_record():
 # Delete record function
 def delete_record():
     Issue_No = input("Enter the Issue Number you want to delete: ")
-    print("Are you sure you want to delete Issue ", Issue_No, "?")
+    print("Are you sure you want to delete Issue", Issue_No, "?")
     confirmation = input("Your selection (Yes/No): ")
     temp_file = "temp.csv"
 
     if confirmation == "Yes":
+        issue_found = False
+
         with open('Data.csv', mode='r') as file, open(temp_file, mode='w', newline='') as temp:
             reader = csv.DictReader(file)
             writer = csv.DictWriter(temp, fieldnames=reader.fieldnames)
             writer.writeheader()
 
             for row in reader:
-                if row['IssueNo'] != Issue_No:
+                if row['IssueNo'] == Issue_No:
+                    issue_found = True
+                else:
                     writer.writerow(row)
 
         os.remove('Data.csv')
         os.rename(temp_file, 'Data.csv')
-        print("Record deleted successfully!")
+
+        if issue_found:
+            print("Record deleted successfully!")
+        else:
+            print("Issue", Issue_No, "does not exist!")
         
 # Edit record function
 def edit_record():
