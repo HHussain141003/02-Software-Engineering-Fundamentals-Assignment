@@ -71,7 +71,7 @@ def add_record():
         file.seek(0, 2)  # Move the pointer to the end of the file
         writer.writerow([IssueNo, Name, Surname, Telephone, Email, Severity, Type, Comments, Days_Affected, Solved])
 
-    print("Issue added successfully!")
+    print("New record added successfully!")
 
 # Delete record function
 def delete_record():
@@ -192,7 +192,6 @@ while user_action != "X":
 
     if user_action == "N":
         add_record()
-        print("New Record added successfully!")
         table()
     elif user_action == "E":
         edit_record()
