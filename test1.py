@@ -76,21 +76,23 @@ def add_record():
 # Delete record function
 def delete_record():
     Issue_No = input("Enter the Issue Number you want to delete: ")
-    confirmation = ""
+    print("Are you sure you want to delete Issue ", Issue_No, "?")
+    confirmation = input("Your selection (Yes/No): ")
     temp_file = "temp.csv"
 
-    with open('Data.csv', mode='r') as file, open(temp_file, mode='w', newline='') as temp:
-        reader = csv.DictReader(file)
-        writer = csv.DictWriter(temp, fieldnames=reader.fieldnames)
-        writer.writeheader()
+    if confirmation == "Yes":
+        with open('Data.csv', mode='r') as file, open(temp_file, mode='w', newline='') as temp:
+            reader = csv.DictReader(file)
+            writer = csv.DictWriter(temp, fieldnames=reader.fieldnames)
+            writer.writeheader()
 
-        for row in reader:
-            if row['IssueNo'] != Issue_No:
-                writer.writerow(row)
+            for row in reader:
+                if row['IssueNo'] != Issue_No:
+                    writer.writerow(row)
 
-    os.remove('Data.csv')
-    os.rename(temp_file, 'Data.csv')
-    print("Record deleted successfully!")
+        os.remove('Data.csv')
+        os.rename(temp_file, 'Data.csv')
+        print("Record deleted successfully!")
         
 # Edit record function
 def edit_record():
