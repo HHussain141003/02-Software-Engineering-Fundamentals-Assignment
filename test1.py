@@ -1,7 +1,7 @@
 # Name:                 Test1.py
 # Created on:           21/03/2023
 
-# Import all Libraries required for the Application
+# Import all Libraries required for the Application, if not available please perform -pip install
 import csv
 import os
 from prettytable import from_csv
