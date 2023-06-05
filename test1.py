@@ -2,6 +2,7 @@
 # Created on:           21/03/2023
 
 # Import all Libraries required for the Application, if not available please perform -pip install
+import re
 import csv
 import os
 from prettytable import from_csv
@@ -26,13 +27,13 @@ def add_record():
         # Validation for the necessary fields.
         while True:
             Name = input("Enter your name: ")
-            if any(char.isdigit() for char in Name):
+            if re.search(r'[0-9\W]', Name):
                 print("Please enter a valid name!")
             else:
                 break
         while True:
             Surname = input("Enter your surname: ")
-            if any(char.isdigit() for char in Name):
+            if re.search(r'[0-9\W]', Surname):
                 print("Please enter a valid surname!")
             else:
                 break
@@ -131,19 +132,31 @@ def edit_record():
     print("Existing information:")
     for key, value in existing_row.items():
         print(f"{key}: {value}")
-
     print("\nEnter new information (leave blank to keep existing value):")
-    name = input("Name: ")
-    if not name:
-        name = existing_row['Name']
 
-    surname = input("Surname: ")
-    if not surname:
-        surname = existing_row['Surname']
+    while True:
+        name = input("Name: ")
+        if not name:
+            name = existing_row['Name']
+        if re.search(r'[0-9\W]', name):
+            print("Please enter a valid name!")
+        else:
+            break
+
+    while True:
+        surname = input("Surname: ")
+        if not surname:
+            surname = existing_row['Name']
+        if re.search(r'[0-9\W]', surname):
+            print("Please enter a valid surname!")
+        else:
+            break
+
 
     telephone = input("Telephone: ")
     if not telephone:
         telephone = existing_row['Telephone']
+
 
     email = input("Email: ")
     if not email:

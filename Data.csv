@@ -9,4 +9,4 @@ IssueNo,Name,Surname,Telephone,Email,Severity,Type,Comments,Days_Affected,Solved
 8,Steven,Clarke,07400761865,Steven.Clarke@fujitsu.com,Medium,Hardware,Keyboard not working,3,Yes
 9,Ronald,Moore,07819037354,Ronald.Moore@fujitsu.com,High,Email,Email account has been hacked,2,No
 10,Donna,Clarke,07837539098,Donna.Clarke@fujitsu.com,Low,Software,Excel freezes when trying to save,1,No
-11,Hanan,Hussain,07490991441,Hanan.Hussain@fujitsu.com,High,Network,VPN not connecting,2,No
+11,Hanan,Hanan,07490991441,Hanan.Hussain@fujitsu.com,High,Firewall,Firewall doesn't allow access to Word,2,No
