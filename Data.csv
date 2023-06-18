@@ -1,12 +1,12 @@
 IssueNo,Name,Surname,Telephone,Email,Severity,Type,Comments,Days_Affected,Solved
-1,James,Evans,07943634354,James.Evans@gmail.com,Low,Network Connectivity,Unable to connect to the internet,2,No
-2,Amelia,Miller,07989868452,Amelia.Miller@gmail.com,Medium,Software,Microsoft Office keeps crashing,3,Yes
-3,Diane,Cook,07974037052,Diane.Cook@gmail.com,High,Hardware,Laptop won't turn on,1,Yes
-4,George,Harrison,07876099495,George.Harrison@gmail.com,Low,Network Connectivity,Slow internet speeds,4,No
-5,Laura,Wood,07823590672,Laura.Wood@gmail.com,Medium,Email,Can't send or receive emails,5,Yes
-6,Emily,Hall,07940962199,Emily.Hall@gmail.com,High,Security,"Suspected phishing email received, clicked on link and entered credentials",1,No
-7,Tyler,Kelly,07068346398,Tyler.Kelly@gmail.com,Low,Software,Printer won't connect to laptop,2,No
-8,Steven,Clarke,07400761865,Steven.Clarke@gmail.com,Medium,Hardware,Keyboard not working,3,Yes
-9,Ronald,Moore,07819037354,Ronald.Moore@gmail.com,High,Email,Email account has been hacked,2,No
-10,Donna,Clarke,07837539098,Donna.Clarke@gmail.com,Low,Software,Excel freezes when trying to save,1,No
-11,Hanan,Hanan,07490991441,Hanan.Hussain@gmail.com,High,Firewall,Firewall doesn't allow access to Word,2,No
+1,James,Evans,07943634354,James.Evans@outlook.com,Low,Network Connectivity,Unable to connect to the internet,2,No
+2,Amelia,Miller,07989868452,Amelia.Miller@outlook.com,Medium,Software,Microsoft Office keeps crashing,3,Yes
+3,Diane,Cook,07974037052,Diane.Cook@outlook.com,High,Hardware,Laptop won't turn on,1,Yes
+4,George,Harrison,07876099495,George.Harrison@outlook.com,Low,Network Connectivity,Slow internet speeds,4,No
+5,Laura,Wood,07823590672,Laura.Wood@outlook.com,Medium,Email,Can't send or receive emails,5,Yes
+6,Emily,Hall,07940962199,Emily.Hall@outlook.com,High,Security,"Suspected phishing email received, clicked on link and entered credentials",1,No
+7,Tyler,Kelly,07068346398,Tyler.Kelly@outlook.com,Low,Software,Printer won't connect to laptop,2,No
+8,Steven,Clarke,07400761865,Steven.Clarke@outlook.com,Medium,Hardware,Keyboard not working,3,Yes
+9,Ronald,Moore,07819037354,Ronald.Moore@outlook.com,High,Email,Email account has been hacked,2,No
+10,Donna,Clarke,07837539098,Donna.Clarke@outlook.com,Low,Software,Excel freezes when trying to save,1,No
+11,Hanan,Hanan,07490991441,Hanan.Hussain@outlook.com,High,Firewall,Firewall doesn't allow access to Word,2,No
